@@ -40,5 +40,5 @@ XSYUthesis_xelatex is an *unofficial* XeLaTeX template for preparing  master, or
 
 * 在Chapter1.tex文件中的最后一行命令用于去除latex自动生成的偶数空白页，因为LaTeX会给奇数页结束的章节添上空白页。这是有它的道理的，一章总是要从奇数页开始的，如果上一章结束于奇数页，它就会给你加一个空白的偶数页，你把它去掉反而不合乎出版业的规矩。然而，我校奇葩的论文写作规范中给出了不允许章节中出现空白页的情况。针对这种要求，请同学们自行在章末尾添加命令\let\cleardoublepage\clearpage。
 ## 查重问题
-本模板生成的PDF在知网查重符合学校标准，不会产生乱码。
+本模板生成的PDF在知网查重符合西电要求，不会产生乱码。
 
