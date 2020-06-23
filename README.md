@@ -30,6 +30,9 @@ XSYUthesis_xelatex is an *unofficial* XeLaTeX template for preparing  master, or
 ## 字体的安装
 我校研究生学位论文封面中使用了方正小标宋。对于windows系统而言，[字体安装](https://www.zhihu.com/question/285154415)，请谨记：安装字体时请右键选择方正小标宋.ttf文件并选择为所有用户安装。当安装好方正小标宋之后，请执行在CMD窗口中执行fc­cache。再执行fc­list :lang=zh>>D:\zh.txt。打开zh.txt找到方正小标宋.ttf所在的行，记下跟在后面的FZXiaoBiaoSong­B05S（本人系统中显示的是这个字族编号，也可能与你不同）。接下来打开XSYUthesis.cls文件，查找”设置小标宋字体”，将命令\setCJKfamilyfont{xbsong}[AutoFakeBold=true]{FZXiaoBiaoSong­B05S}中的FZXiaoBiaoSong­B05S替换为你自己系统中通过fc­list命令查到的字族编号。
 
+## 参考文献格式标准
+本模板使用gbt7714-2005.bst文件控制参考文献样式，而学校文件中指出的是GB7714-87（显然已经远远落后于时代步伐），用户想要使用不同的参考文献格式，请自行准备.bst文件，例如[gbt7714-2015](https://github.com/CTeX-org/gbt7714-bibtex-style),将文件放置于模板目录中，并在XSYUthesis.cls文件中找到\bibliographystyle{gbt7714-2005}命令行进行修改。
+
 ## 已知问题
 * 使用XeTeX时，AutoFakeBold选项导致复制乱码。模板中在`\begin{document}`后插入一个日文的空格'　'，使得除章节一级标题外其他内容可复制。
 
