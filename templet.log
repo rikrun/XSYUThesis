@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.5.31)  23 JUN 2020 11:39
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.5.31)  23 JUN 2020 14:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/2019123001/Desktop/硕士学位论文/XSYUthesis_xelatex/templet
-(c:/Users/2019123001/Desktop/硕士学位论文/XSYUthesis_xelatex/templet.tex
+**f:/XSYUcache/张留美/研究生工作工具集/XSYUThesis/templet
+(f:/XSYUcache/张留美/研究生工作工具集/XSYUThesis/templet.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-05-15> (./XSYUthesis.cls
 Document Class: XSYUthesis 2020/06/01 XSYU, Thesis document class, version 0.1.0
@@ -1444,11 +1444,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 32.
  ) 
 Here is how much of TeX's memory you used:
  30987 strings out of 479282
- 652144 string characters out of 5884016
+ 652093 string characters out of 5884016
  909875 words of memory out of 5000000
  47944 multiletter control sequences out of 15000+600000
  546763 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 63i,24n,91p,1015b,765s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,24n,91p,998b,765s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on templet.pdf (33 pages).
