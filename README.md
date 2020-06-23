@@ -24,7 +24,7 @@ XSYUthesis_xelatex is an *unofficial* XeLaTeX template for preparing  master, or
 2. [安装过程](https://blog.csdn.net/weixin_39892850/article/details/105468247)
 
 ## Visual Studio Code的安装
-1. [安装过程](https://zhuanlan.zhihu.com/p/106357123）
+1. [安装过程](https://zhuanlan.zhihu.com/p/106357123)
 2. vscode的Latex[环境配置](https://zhuanlan.zhihu.com/p/38178015)
 
 ## 字体的安装
