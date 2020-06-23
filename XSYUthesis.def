@@ -1,0 +1,99 @@
+
+\ProvidesFile{XSYUthesis.def}[2020/06/01 XSYU, Thesis document class, version 0.1.0]
+
+% General
+\def\XSYU@label@stutype{全\hspace*{0.5em}日\hspace*{0.5em}制\hspace*{0.5em}学\hspace*{0.5em}术\hspace*{0.5em}型}
+\def\XSYU@label@university{西安石油大学}
+\def\XSYU@elabel@university{XIAN SHIYOU UNIVERSITY}
+
+% 封面
+\def\XSYU@label@cover@classification{分\hspace*{0.5em}类\hspace*{0.5em}号\hspace*{0.9em}}
+\def\XSYU@label@cover@UDC{学校代码\hspace*{0.9em}}
+\def\XSYU@label@cover@studentNo{学\quad{}\quad{}号\hspace*{0.9em}}
+\def\XSYU@label@cover@confidential{密\quad{}\quad{}级\hspace*{0.9em}}
+\def\XSYU@label@cover@title{题\hspace*{5em}目}
+\def\XSYU@label@cover@author{作\hspace*{1em}者\hspace*{1em}姓\hspace*{1em}名}
+\def\XSYU@label@cover@major{学科(专业)名称}
+\def\XSYU@label@cover@submajor{二级学科（研究方向）}
+\def\XSYU@label@cover@degree{学位类别}
+\def\XSYU@label@cover@advisor{导\hspace*{0.45em}师\hspace*{0.45em}姓\hspace*{0.45em}名\hspace*{0.45em}、职\hspace*{0.45em}称}
+\def\XSYU@elabel@cover@advisor{Supervisor~}
+\def\XSYU@label@cover@school{学\hspace*{2.05em}院：}
+\def\XSYU@label@cover@submit@date{提\hspace*{0.2em}交\hspace*{0.2em}论\hspace*{0.2em}文\hspace*{0.2em}日\hspace*{0.2em}期}
+\def\XSYU@label@cover@empty{\hspace*{7em}}
+\def\XSYU@label@cover@schoolAdvisor{学校导师姓名、职称}
+\def\XSYU@label@cover@industrialAdvisor{企业导师姓名、职称}
+\def\XSYU@label@cover@field{领{\quad\quad}域}
+\def\XSYU@elabel@cover@thesis@ProMasterTitle{Title of the Thesis for Professional Master's Degree of XIDIAN UNIVERSITY}
+
+% 声明和版权
+\def\XSYU@label@stat@statement{学位论文创新性声明}
+\def\XSYU@lable@stat@copyright{学位论文使用授权的说明}
+\def\XSYU@lable@stat@auther{论文作者签名：}
+\def\XSYU@lable@stat@advisor{导\hspace*{1em}师\hspace*{1em}签名：}
+\def\XSYU@lable@stat@date{日期：}
+\def\XSYU@toc@statementandcopyright{学位论文创新性声明与使用授权说明}
+\def\XSYU@value@stat@statement{本人声明所呈交的学位论文是我个人在导师指导下进行的研究工作及取得的研究成果。尽我所知，除了文中特别加以标注和致谢中所罗列的内容以外，论文中不包含其他人已经发表或撰写过的研究成果；也不包含为获得西安石油大学或其它教育机构的学位或证书而使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中做了明确的说明并表示了谢意。
+
+申请学位论文与资料若有不实之处，本人承担一切相关责任。}
+
+\def\XSYU@value@stat@copyright{本人完全了解西安石油大学有关保留和使用学位论文的规定，即：研究生在校攻读学位期间论文工作的知识产权单位属西安石油大学。学校享有以任何方法发表、复制、公开阅览、借阅以及申请专利等权利。本人离校后发表或使用学位论文或与该论文直接相关的学术论文或成果时，署名单位仍然为西安石油大学。}
+\def\XSYU@value@stat@confidential{·注：如本论文涉密，请在使用授权的说明中指出（含解密年限等）。}
+% chapter
+\def\XSYU@chapter@prenumber{第}
+\def\XSYU@chapter@afternumber{章}
+
+% 图表名称
+\def\XSYU@label@figure@cap{图}
+\def\XSYU@label@table@cap{表}
+
+% 摘要
+\def\XSYU@elabel@abstract@title{Subject\hspace*{1.1em}:\hspace*{0.5em}}
+\def\XSYU@elabel@abstract@speciality{Speciality\hspace*{0.1em}:\hspace*{0.5em}}
+\def\XSYU@elabel@abstract@name{Name\hspace*{1.8em}:\hspace*{0.5em}}
+\def\XSYU@elabel@abstract@instructor{Instructor:\hspace*{0.5em}}
+\def\XSYU@label@abstract{摘\hspace*{3em}要}
+\def\XSYU@elabel@abstract{ABSTRACT}
+\def\XSYU@elabel@graphindex{插图索引}
+\def\XSYU@toc@abstract{中文摘要}
+\def\XSYU@etoc@abstract{英文摘要}
+\def\XSYU@etoc@graphindex{插图索引}
+\def\XSYU@label@keywords{关键词：}
+\def\XSYU@elabel@keywords{Keywords:}
+\def\XSYU@label@abstract@title{论文题目：}
+\def\XSYU@label@abstract@procession{专\hspace*{2em}业：}
+\def\XSYU@label@abstract@stu{硕\hspace*{0.5em}士\hspace*{0.5em}生：}
+\def\XSYU@label@abstract@instructor{导\hspace*{2em}师：}
+\def\XSYU@label@abstract@studytype{论文类型：}
+\def\XSYU@label@abstract@acknowledgement{（本文得到＊＊＊大学科学研究资金的资助）}
+\def\XSYU@elabel@abstract@acknowledgement{(The paper is supported by Science Research Foundation of ＊＊＊ university)}
+% 目录
+\def\XSYU@label@listoffigures{插图索引}
+\def\XSYU@toc@listoffigures{插图索引}
+\def\XSYU@label@listoftables{表格索引}
+\def\XSYU@toc@listoftables{表格索引}
+\def\XSYU@label@symbollist@title{符号对照表}
+\def\XSYU@toc@symbollist@title{符号对照表}
+\def\XSYU@label@abbreviationlist@title{缩略语对照表}
+\def\XSYU@toc@abbreviationlist@title{缩略语对照表}
+\def\XSYU@label@content{目\hspace*{3em}录}
+\def\XSYU@toc@content{目录}
+
+% 参考文献
+\def\XSYU@label@ref@title{参考文献}
+\def\XSYU@toc@ref@title{参考文献}
+
+% 致谢
+\def\XSYU@label@thanks{致谢}
+\def\XSYU@toc@thanks{致谢}
+% 附录
+\def\XSYU@label@appendix{附录}
+\def\XSYU@toc@appendix{附录}
+% 简历
+\def\XSYU@label@resume@title{攻读硕士学位期间参加科研情况及获得的学术成果}
+\def\XSYU@toc@resume@title{攻读硕士学位期间参加科研情况及获得的学术成果}
+\def\XSYU@label@resume@baseinfo{基本情况}
+\def\XSYU@label@resume@name{姓名：}
+\def\XSYU@label@resume@sex{性别：}
+\def\XSYU@label@resume@birthday{出生日期：}
+\def\XSYU@label@resume@place{籍贯：}
