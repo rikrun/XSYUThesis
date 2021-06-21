@@ -663,14 +663,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%    referrence
 \RequirePackage{url}
-\renewcommand{\UrlFont}{\XSYU@font@zihao{5}}
+\renewcommand{\UrlFont}{\XSYU@font@zihao{-4}}
 \ctexset { bibname={\XSYU@label@ref@title } }
 \bibliographystyle{gbt7714-2005}
 
 \renewenvironment{thebibliography}[1]
   {\XSYU@toc@add{\XSYU@toc@ref@title}%
    \XSYU@nchapter{\bibname}%
-   \XSYU@font@zihao{5}%
+   \XSYU@font@zihao{-4}%
    \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
    \list{\@biblabel{\@arabic\c@enumiv}}%
     {\setlength{\topsep}{0pt}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}
