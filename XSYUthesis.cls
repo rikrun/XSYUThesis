@@ -197,21 +197,13 @@
 %% 页面设置区域
 %% 参考网址：https://en.wikibooks.org/wiki/LaTeX/Page_Layout
 %% page ql head
-\setlength{\textwidth}{\paperwidth-4.9cm}% 2.5+2.0+0.4
-\setlength{\textheight}{\paperheight-2.5cm-2.5cm}%
-\setlength\marginparwidth{0cm}%
-\setlength\marginparsep{0cm}%
-\setlength{\oddsidemargin}{2.9cm-1in-\hoffset}% hoffset 正文的水平偏移
-\setlength{\evensidemargin}{2.1cm-1in-\hoffset}%
-%\setlength{\headheight}{31pt}%
-%\setlength{\headheight}{10.5pt}%
-\setlength{\headheight}{31pt}%
-%\setlength{\headsep}{0pt}%
-%\setlength{\headsep}{1cm-10.5pt}%
-%\setlength{\headsep}{25.5pt}%
-\setlength{\headsep}{1cm-\headheight}%
-\setlength{\topmargin}{3cm-1in-\voffset-\headheight-\headsep}% voffset 正文的垂直偏移
-\setlength{\footskip}{3cm-1.75cm}%
+\RequirePackage{geometry}
+\geometry{a4paper,left=29mm,right=20mm,top=25mm,bottom=25mm,includefoot=false,includehead=false}
+\setlength{\voffset}{-10mm}
+\setlength{\topmargin}{0mm}
+\setlength{\headheight}{25pt}
+\setlength{\headsep}{0mm}
+\setlength{\footskip}{7.5mm} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%    head and foot
