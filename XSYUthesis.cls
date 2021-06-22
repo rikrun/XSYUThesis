@@ -108,7 +108,7 @@
    \endgroup}
  \renewcommand*\l@figure{\@dottedtocline{1}{0em}{4em}}
  \let\l@table\l@figure \makeatother}
- 
+
 
 
 %%%%%%%%%%%%%%%%%%%%
@@ -169,19 +169,20 @@
 % 设置文档正文字体为宋体
 %\setCJKmainfont[BoldFont=SimHei]{SimSun}
 %\setCJKmonofont{SimSun}     % 设置缺省中文字体
-%\setCJKfamilyfont{song}[AutoFakeBold=1]{SimSun}                             %宋体 song  
-\setCJKfamilyfont{song}[AutoFakeBold=true]{SimSun}                             %宋体 song  
+%\setCJKfamilyfont{song}[AutoFakeBold=1]{SimSun}                             %宋体 song
+\setCJKfamilyfont{song}[AutoFakeBold=true]{SimSun}                             %宋体 song
 \newcommand{\song}{\CJKfamily{song}}
-\setCJKfamilyfont{fsong}[AutoFakeBold=true]{STFangsong}                             %宋体 song  
+\setCJKfamilyfont{fsong}[AutoFakeBold=true]{STFangsong}                             %宋体 song
 \newcommand{\fsong}{\CJKfamily{fsong}}
 %设置小标宋字体
-\setCJKfamilyfont{xbsong}[AutoFakeBold=true]{FZXiaoBiaoSong-B05S}                             %宋体 song  
+%\setCJKfamilyfont{xbsong}[AutoFakeBold=true]{FZXiaoBiaoSong-B05S}
+\setCJKfamilyfont{xbsong}[AutoFakeBold=true,Path=./font/]{FZxiaobiao.ttf}                           %宋体 song
 \newcommand{\xbsong}{\CJKfamily{xbsong}}
-%\setCJKfamilyfont{hei}{SimHei}                              %黑体  hei 
-%\setCJKfamilyfont{hei}[AutoFakeBold=1]{SimHei}                              %黑体  hei  
-\setCJKfamilyfont{hei}[AutoFakeBold=true]{SimHei}                              %黑体  hei  
+%\setCJKfamilyfont{hei}{SimHei}                              %黑体  hei
+%\setCJKfamilyfont{hei}[AutoFakeBold=1]{SimHei}                              %黑体  hei
+\setCJKfamilyfont{hei}[AutoFakeBold=true]{SimHei}                              %黑体  hei
 \newcommand{\hei}{\CJKfamily{hei}}
-  
+
 %% family
 \DeclareRobustCommand*{\XSYU@font@st}{\song}
 \DeclareRobustCommand*{\XSYU@font@ht}{\hei}
@@ -196,21 +197,13 @@
 %% 页面设置区域
 %% 参考网址：https://en.wikibooks.org/wiki/LaTeX/Page_Layout
 %% page ql head
-\setlength{\textwidth}{\paperwidth-4.9cm}% 2.5+2.0+0.4
-\setlength{\textheight}{\paperheight-2.5cm-2.5cm}%
-\setlength\marginparwidth{0cm}%
-\setlength\marginparsep{0cm}%
-\setlength{\oddsidemargin}{2.9cm-1in-\hoffset}% hoffset 正文的水平偏移
-\setlength{\evensidemargin}{2.1cm-1in-\hoffset}%
-%\setlength{\headheight}{31pt}%
-%\setlength{\headheight}{10.5pt}%
-\setlength{\headheight}{31pt}%
-%\setlength{\headsep}{0pt}%
-%\setlength{\headsep}{1cm-10.5pt}%
-%\setlength{\headsep}{25.5pt}%
-\setlength{\headsep}{1cm-\headheight}%
-\setlength{\topmargin}{3cm-1in-\voffset-\headheight-\headsep}% voffset 正文的垂直偏移
-\setlength{\footskip}{3cm-1.75cm}%
+\RequirePackage{geometry}
+\geometry{a4paper,left=29mm,right=20mm,top=25mm,bottom=25mm,includefoot=false,includehead=false}
+\setlength{\voffset}{-10mm}
+\setlength{\topmargin}{0mm}
+\setlength{\headheight}{25pt}
+\setlength{\headsep}{0mm}
+\setlength{\footskip}{7.5mm} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%    head and foot
@@ -237,7 +230,7 @@
 
 %\renewcommand{\headrule}{%
 %    {\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
-%    %\vskip 1pt% 
+%    %\vskip 1pt%
 %    \hrule\@height\headrulewidth\@width\headwidth
 %    \hrule\@height\headrulewidth\@width\headwidth
 %    \vskip-1\headrulewidth
@@ -291,18 +284,18 @@
 \setcounter{secnumdepth}{4}
 
 %% chapter
-\ctexset { chapter = { 
-                        name={\XSYU@font@st\XSYU@chapter@prenumber,\XSYU@font@st\XSYU@chapter@afternumber }, 
-                        number={\XSYU@font@st\chinese {chapter}}, 
-                        format={\centering  \XSYU@font@zihao {3}}, 
-                        nameformat={}, 
+\ctexset { chapter = {
+                        name={\XSYU@font@st\XSYU@chapter@prenumber,\XSYU@font@st\XSYU@chapter@afternumber },
+                        number={\XSYU@font@st\chinese {chapter}},
+                        format={\centering  \XSYU@font@zihao {3}},
+                        nameformat={},
                         numberformat={},
                         aftername={\quad },
-                        titleformat={}, 
-                        beforeskip={6pt}, 
+                        titleformat={},
+                        beforeskip={6pt},
                         afterskip={18pt},
-                        indent={0pt} 
-                    } 
+                        indent={0pt}
+                    }
 }
 
 %% chapter without number
@@ -310,46 +303,46 @@
 \DeclareRobustCommand{\XSYU@nlchapter}[1]{\chapter*{#1}\markboth{#1}{}}
 %% section
 \ctexset { section = {
-                      name={,}, 
-                      number={\thesection }, 
-                      format={\raggedright \XSYU@bold \XSYU@font@st \XSYU@font@zihao {4}}, 
+                      name={,},
+                      number={\thesection },
+                      format={\raggedright \XSYU@bold \XSYU@font@st \XSYU@font@zihao {4}},
                       nameformat={},
-                      numberformat={}, 
-                      aftername={\quad }, 
-                      titleformat={}, 
-                      beforeskip={18pt plus 0pt minus 0pt}, 
-                      afterskip={12pt}, 
-                      indent={0pt} 
-                     } 
+                      numberformat={},
+                      aftername={\quad },
+                      titleformat={},
+                      beforeskip={18pt plus 0pt minus 0pt},
+                      afterskip={12pt},
+                      indent={0pt}
+                     }
 }
 
 %% subsection
 \ctexset { subsection = {
-                         name={,}, 
+                         name={,},
                          number={\thesubsection},
                          format={\raggedright \XSYU@bold \XSYU@font@st \XSYU@font@zihao {4}},
-                         nameformat={}, 
-                         numberformat={}, 
-                         aftername={\quad }, 
+                         nameformat={},
+                         numberformat={},
+                         aftername={\quad },
                          titleformat={},
-                         beforeskip={12pt plus 0pt minus 0pt}, 
-                         afterskip={6pt}, 
-                         indent={0em} 
-                        } 
+                         beforeskip={12pt plus 0pt minus 0pt},
+                         afterskip={6pt},
+                         indent={0em}
+                        }
 }
 
 %% subsubsection
-\ctexset { subsubsection = { 
-                            name={,}, 
+\ctexset { subsubsection = {
+                            name={,},
                             number={\thesubsubsection},
-                            format={\raggedright \XSYU@font@st \XSYU@font@zihao {4}}, 
+                            format={\raggedright \XSYU@font@st \XSYU@font@zihao {4}},
                             nameformat={},
-                            numberformat={}, 
-                            aftername={\quad }, 
-                            titleformat={}, 
-                            beforeskip={6pt plus 0pt minus 0pt}, 
-                            afterskip={0pt}, indent={4em} 
-                           } 
+                            numberformat={},
+                            aftername={\quad },
+                            titleformat={},
+                            beforeskip={6pt plus 0pt minus 0pt},
+                            afterskip={0pt}, indent={4em}
+                           }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -359,7 +352,7 @@
 \ctexset { figurename={\XSYU@font@zihao {5}\XSYU@label@figure@cap } }
 
 %% table name
-\ctexset { tablename={\XSYU@font@zihao {5}\XSYU@label@table@cap } } 
+\ctexset { tablename={\XSYU@font@zihao {5}\XSYU@label@table@cap } }
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}} %转行
 
 \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
@@ -431,7 +424,7 @@
       \centering
       \hspace{-10pt}\includegraphics[width=4cm]{figures/uni_logo}
     \end{figure}%
-    
+
     \vspace{35pt}
     \hspace{0cm}\parbox{14.88cm}{
         \hei\XSYU@font@zihao{3}\setlength{\baselineskip}{32pt}%
@@ -443,10 +436,10 @@
         \vspace{0.5em}
         {\zihao{-4}\XSYU@label@cover@advisor}\hspace{0.5em}\XSYU@underline[10.56cm]\XSYU@value@advisor@name\\%
         \vspace{0.5em}
-        {\XSYU@label@cover@major}\hspace{0.5em}\XSYU@underline[10.56cm]\XSYU@value@author@major\\%        
+        {\XSYU@label@cover@major}\hspace{0.5em}\XSYU@underline[10.56cm]\XSYU@value@author@major\\%
         \vspace{0.5em}
         {\XSYU@label@cover@submit@date}\hspace{0.5em}\XSYU@underline[10.56cm]\XSYU@value@thesis@submit@date%
-        
+
     }
    \clearpage\thispagestyle{empty}%
    \renewcommand{\baselinestretch}{1}%
@@ -576,7 +569,7 @@
         \textbf{\XSYU@elabel@abstract@title}&\textbf{\XSYU@evalue@thesis@title} \\
         \textbf{\XSYU@elabel@abstract@speciality}&\textbf{\XSYU@evalue@author@major}  \\
         \textbf{\XSYU@elabel@abstract@name}&\textbf{\XSYU@evalue@author@name\XSYU@evalue@thesis@signature\XSYU@underline[3cm]}\  \\
-        \textbf{\XSYU@elabel@abstract@instructor}&\textbf{\XSYU@evalue@advisor@name\XSYU@evalue@thesis@signature\XSYU@underline[3cm]} 
+        \textbf{\XSYU@elabel@abstract@instructor}&\textbf{\XSYU@evalue@advisor@name\XSYU@evalue@thesis@signature\XSYU@underline[3cm]}
       \end{tabular}}
       \end{table}
   \begin{center}
@@ -622,7 +615,7 @@
     \setlength{\belowcaptionskip}{0pt}
     %%\renewcommand{\captionlabeldelim}{\ ~}%去冒号
     \DeclareCaptionLabelSeparator{twospace}{\ ~}
-    \captionsetup{labelsep=twospace} 
+    \captionsetup{labelsep=twospace}
     %% 图表标题字体及字体大小设置
     \renewcommand{\captionfont}{\XSYU@font@ht\XSYU@font@zihao{5}}
 
@@ -633,7 +626,7 @@
 %    \listoffigures}
 
 %% list of tables
-%\ctexset { listtablename={\XSYU@label@listoftables } } 
+%\ctexset { listtablename={\XSYU@label@listoftables } }
 %\DeclareRobustCommand{\XSYU@listoftables}
 %  {\XSYU@toc@add{\XSYU@toc@listoftables}%
 %    \listoftables}
@@ -660,7 +653,7 @@
 
 %% content
 \ctexset {contentsname={\vskip -20pt  \XSYU@label@content \vskip -15pt  }}
-\DeclareRobustCommand{\XSYU@tableofcontents} 
+\DeclareRobustCommand{\XSYU@tableofcontents}
   {\tableofcontents}
 %\renewcommand{\cftdotsep}{0.3pt}
 %\newcommand\mydot[1]{\scalebox{#1}{.}}
@@ -670,14 +663,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%    referrence
 \RequirePackage{url}
-\renewcommand{\UrlFont}{\XSYU@font@zihao{5}}
+\renewcommand{\UrlFont}{\XSYU@font@zihao{-4}}
 \ctexset { bibname={\XSYU@label@ref@title } }
 \bibliographystyle{gbt7714-2005}
 
 \renewenvironment{thebibliography}[1]
   {\XSYU@toc@add{\XSYU@toc@ref@title}%
    \XSYU@nchapter{\bibname}%
-   \XSYU@font@zihao{5}%
+   \XSYU@font@zihao{-4}%
    \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
    \list{\@biblabel{\@arabic\c@enumiv}}%
     {\setlength{\topsep}{0pt}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}

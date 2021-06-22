@@ -18,7 +18,7 @@ XSYUthesis_xelatex is an *unofficial* XeLaTeX template for preparing  master, or
 
 ## 系统需求
 
-本模板需要使用 XeTeX 引擎编译。Linux下编译时需首先配置windows系统中提供的SimSun和SimHei字体。原模板验证无问题的平台为Debian 8 和TeX Live 2016，TeX Live 2017，TeX Live 2019。本模板是在Windows 10(2004)下，安装TexLive2020及Visual Studio Code后，修改制作完成的。
+本模板需要使用 XeTeX 引擎编译。Linux下编译时需首先配置windows系统中提供的SimSun和SimHei字体。原模板验证无问题的平台为Debian 8 和TeX Live 2016，TeX Live 2017，TeX Live 2019。本模板是在Windows 10(2004)下，安装TexLive2020及Visual Studio Code后，修改制作完成的, 并在 TexLive2021 下验证无问题。
 
 ## TexLive的安装
 1. 下载[TexLive](http://mirror.ctan.org/systems/texlive/tlnet/install­tl­windows.exe)
@@ -29,7 +29,7 @@ XSYUthesis_xelatex is an *unofficial* XeLaTeX template for preparing  master, or
 2. vscode的Latex[环境配置](https://zhuanlan.zhihu.com/p/38178015)
 
 ## 字体的安装
-我校研究生学位论文封面中使用了方正小标宋。对于windows系统而言，[字体安装](https://www.zhihu.com/question/285154415)，请谨记：安装字体时请右键选择方正小标宋.ttf文件并选择为所有用户安装。当安装好方正小标宋之后，请执行在CMD窗口中执行fc­-cache。再执行fc-­list :lang=zh>>D:\zh.txt。打开zh.txt找到方正小标宋.ttf所在的行，记下跟在后面的FZXiaoBiaoSong­B05S（本人系统中显示的是这个字族编号，也可能与你不同）。接下来打开XSYUthesis.cls文件，查找”设置小标宋字体”，将命令\setCJKfamilyfont{xbsong}[AutoFakeBold=true]{FZXiaoBiaoSong­B05S}中的FZXiaoBiaoSong­B05S替换为你自己系统中通过fc­list命令查到的字族编号。
+我校研究生学位论文封面中使用了方正小标宋。windows系统下需要自行安装。请谨记：非必要请勿移动fornt/FZxiaobiao.ttf的文件位置，如需移动，请将 XSYUthesis.cls 文件中的命令\setCJKfamilyfont{xbsong}[AutoFakeBold=true,Path=./font/]{FZxiaobiao.ttf}中的Path设置为移动后的路径。
 
 ## 参考文献格式标准
 本模板使用gbt7714-2005.bst文件控制参考文献样式，而学校文件中指出的是GB7714-87（显然已经远远落后于时代步伐），用户想要使用不同的参考文献格式，请自行准备.bst文件，例如[gbt7714-2015](https://github.com/CTeX-org/gbt7714-bibtex-style),将文件放置于模板目录中，并在XSYUthesis.cls文件中找到\bibliographystyle{gbt7714-2005}命令行进行修改。
@@ -40,7 +40,7 @@ XSYUthesis_xelatex is an *unofficial* XeLaTeX template for preparing  master, or
 * 正文中未见参考文献列表及参考文献为[?]的情况：请在使用xelatex命令之前，多使用bibtex命令编译几遍。
 
 * 在Chapter1.tex文件中的最后一行命令用于去除latex自动生成的偶数空白页，因为LaTeX会给奇数页结束的章节添上空白页。这是有它的道理的，一章总是要从奇数页开始的，如果上一章结束于奇数页，它就会给你加一个空白的偶数页，你把它去掉反而不合乎出版业的规矩。然而，我校奇葩的论文写作规范中给出了不允许章节中出现空白页的情况。针对这种要求，请同学们自行在章末尾添加命令\let\cleardoublepage\clearpage。
-* 2021年6月经学生使用，实际印刷后还发现的问题有两个。其一是正文奇偶页页眉横线距页上沿高度不一致；其二是正文内容整体偏下，即就是可以通过页码的位置看出，其距离页下沿较近。期待以后解决，亦或是有哪位同学可以解决，可以联系本人，对这个git库进行维护。
+
 ## 查重
 * 本模板生成的PDF在知网查重符合西电要求，不会产生乱码。
 * 本模板生成的PDF于2021年6月被西安石油大学计算机学院研究生首次使用，并通过了知网查重。

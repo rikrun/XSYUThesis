@@ -1,6 +1,6 @@
 \chapter{补充示例}
 
-前四章给出了学位论文的官方要求。这里补充一些可能用到的示例。
+前三章给出了学位论文的官方要求。这里补充一些可能用到的示例。
 
 \section{公式}
 
@@ -9,7 +9,7 @@
 假设一个数据集$D = {(x_i,y_i),i = 1,\dots,N}$，其中$(x_i,y_i)$是第$i$个标记示例，$x_i$是$M$维输入向量，$y_i\in\{+1,-1\}$是相关联的二进制标签，$N$是数据大小。形如$f(x)= w\cdot\Phi(x)+ b$的SVM分类器通过最大化边缘训练，等效为：
 ~\\
 \begin{subequations}
-\begin{align} 
+\begin{align}
     \min_{w,b,\xi} \frac{1}{2}&\|w\|^2 + C\sum_{i=1}^N\xi_i\\
     \mathrm{s.t.}\quad &\forall i\in1,\dots,N:\xi_i\ge 0,y_i(w\cdot\Phi(x)+b)\ge 1-\xi_i
 \end{align}
@@ -166,7 +166,7 @@ MOSSE分别对分子和分母进行平均：
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
         \hline
         序列  & Frag  &  OAB  &  SBT  &  MIL  & Struck & CSK   & CFwLB   &  Ours \\ \hline
-        
+
         Coke      & 0.034 & 0.168 & 0.048  & 0.117 & \textcolor{blue}{0.942} & 0.739 & 0.918   & \textcolor{red}{0.959}  \\ \hline
         David     & 0.121 & 0.151 & 0.204  & 0.229 & \textcolor{blue}{0.236} & \textcolor{blue}{0.236} & 0.144   & \textcolor{red}{0.396} \\ \hline
         Dog       & 0.173 & 0.157 & 0.079  & 0.197 & 0.157 & 0.144 & \textcolor{blue}{0.858}   & \textcolor{red}{0.992}  \\ \hline
