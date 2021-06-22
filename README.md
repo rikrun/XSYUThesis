@@ -4,7 +4,7 @@ XSYUthesis_xelatex is an *unofficial* XeLaTeX template for preparing  master, or
 
 # 西安石油大学学位论文LaTex模板
 
-本模板根据[西安电子科技大学学位论文latex模板](https://github.com/103yiran/XDUthesis_xelatex)修改制作而成，该模板是根据西安电子科技大学研究生院发布的[研究生学位论文模板（2015版）](http://gr.xidian.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1281831001&wbfileid=2041391)修改而成，并进行修改满足西安石油大学研究生学位论文规定的格式要求。西电研究生院官方发布的模板编译方式为latex，采用GBK编码，仅支持CTeX(2.9.2)。官方模板部分语法老旧，本模板修正了其中存在的一些问题，并且支持xelatex编译，使用时更为便利。模板采用UTF-8编码，支持Linux和TeX Live 2020，理论上也支持MacOS。
+本模板根据[西安电子科技大学学位论文latex模板](https://github.com/103yiran/XDUthesis_xelatex)修改制作而成，该模板是根据西安电子科技大学研究生院发布的[研究生学位论文模板（2015版）](http://gr.xidian.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1281831001&wbfileid=2041391)修改而成，并进行修改满足西安石油大学研究生学位论文规定的格式要求。西电研究生院官方发布的模板编译方式为latex，采用GBK编码，仅支持CTeX(2.9.2)。官方模板部分语法老旧，本模板修正了其中存在的一些问题，并且支持xelatex编译，使用时更为便利。模板采用UTF-8编码，支持Linux, TeX Live 2020 和MacOS。
 
 本模板未经官方认证，但本人尽力使其接近于西安石油大学《硕士学位论文写作规范》。由于精力有限，目前只有论文首页经过严密比对，近似度达到90%。其他文档组成部分近似度也应该达到85%。可能需要微调的地方例如页边距，行间距，页眉横线的长度等等这样的边边角角。
 ## 如何使用
