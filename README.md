@@ -29,7 +29,7 @@ XSYUthesis_xelatex is an *unofficial* XeLaTeX template for preparing  master, or
 2. vscode的Latex[环境配置](https://zhuanlan.zhihu.com/p/38178015)
 
 ## 字体的安装
-我校研究生学位论文封面中使用了方正小标宋。windows系统下需要自行安装。请谨记：非必要请勿移动fornt/FZxiaobiao.ttf的文件位置，如需移动，请将 XSYUthesis.cls 文件中的命令\setCJKfamilyfont{xbsong}[AutoFakeBold=true,Path=./font/]{FZxiaobiao.ttf}中的Path设置为移动后的路径。
+我校研究生学位论文封面中使用了方正小标宋。windows系统下需要自行安装。请谨记：非必要请勿移动font/FZxiaobiao.ttf的文件位置，如需移动，请将 XSYUthesis.cls 文件中的命令\setCJKfamilyfont{xbsong}[AutoFakeBold=true,Path=./font/]{FZxiaobiao.ttf}中的Path设置为移动后的路径。
 
 ## 参考文献格式标准
 本模板使用gbt7714-2005.bst文件控制参考文献样式，而学校文件中指出的是GB7714-87（显然已经远远落后于时代步伐），用户想要使用不同的参考文献格式，请自行准备.bst文件，例如[gbt7714-2015](https://github.com/CTeX-org/gbt7714-bibtex-style),将文件放置于模板目录中，并在XSYUthesis.cls文件中找到\bibliographystyle{gbt7714-2005}命令行进行修改。
