@@ -18,7 +18,7 @@ XSYUthesis_xelatex is an *unofficial* XeLaTeX template for preparing  master, or
 
 ## 系统需求
 
-本模板需要使用 XeTeX 引擎编译。Linux下编译时需首先配置windows系统中提供的SimSun和SimHei字体。原模板验证无问题的平台为Debian 8 和TeX Live 2016，TeX Live 2017，TeX Live 2019。本模板是在Windows 10(2004)下，安装TexLive2020及Visual Studio Code后，修改制作完成的, 并在 TexLive2021 下验证无问题。
+本模板需要使用 XeTeX 引擎编译。Linux/macOs下编译时需首先配置Windows系统中提供的SimSun和SimHei字体。原模板验证无问题的平台为Debian 8 和TeX Live 2016，TeX Live 2017，TeX Live 2019。本模板是在Windows 10(2004)下，安装TexLive2020及Visual Studio Code后，修改制作完成的, 并在 TexLive2021, MacTex2021 下验证无问题。
 
 ## TexLive的安装
 1. 下载[TexLive](http://mirror.ctan.org/systems/texlive/tlnet/install­tl­windows.exe)
