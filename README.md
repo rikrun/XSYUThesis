@@ -18,7 +18,7 @@ XSYUthesis_xelatex is an *unofficial* XeLaTeX template for preparing  master, or
 
 ## 系统需求
 
-本模板需要使用 XeTeX 引擎编译。Linux/macOs下编译时需首先配置Windows系统中提供的SimSun和SimHei字体。原模板验证无问题的平台为Debian 8 和TeX Live 2016，TeX Live 2017，TeX Live 2019。本模板是在Windows 10(2004)下，安装TexLive2020及Visual Studio Code后，修改制作完成的, 并在 TexLive2021, MacTex2021 下验证无问题。
+本模板需要使用 XeTeX 引擎编译。Linux/MacOs 下编译时需首先配置 Windows 系统中提供的 SimSun 和SimHei字体。原模板验证无问题的平台为 Debian 8 和 TeX Live 2016，TeX Live 2017，TeX Live 2019。本模板是在Windows 10(2004)下，安装TexLive2020及Visual Studio Code后，修改制作完成的, 并在 TexLive2021, MacTex2021 下验证无问题。
 
 ## TexLive的安装
 1. 下载[TexLive](http://mirror.ctan.org/systems/texlive/tlnet/install­tl­windows.exe)
@@ -26,13 +26,13 @@ XSYUthesis_xelatex is an *unofficial* XeLaTeX template for preparing  master, or
 
 ## Visual Studio Code的安装
 1. [安装过程](https://zhuanlan.zhihu.com/p/106357123)
-2. vscode的Latex[环境配置](https://zhuanlan.zhihu.com/p/38178015)
+2. Vscode的Latex[环境配置](https://zhuanlan.zhihu.com/p/38178015)
 
 ## 字体的安装
-我校研究生学位论文封面中使用了方正小标宋。windows系统下需要自行安装。请谨记：非必要请勿移动font/FZxiaobiao.ttf的文件位置，如需移动，请将 XSYUthesis.cls 文件中的命令\setCJKfamilyfont{xbsong}[AutoFakeBold=true,Path=./font/]{FZxiaobiao.ttf}中的Path设置为移动后的路径。
+我校研究生学位论文封面中使用了方正小标宋，需要自行安装。请谨记：非必要请勿移动 font/FZxiaobiao.ttf的文件位置，如需移动，请将 XSYUthesis.cls 文件中的命令 \setCJKfamilyfont{xbsong}[AutoFakeBold=true,Path=./font/]{FZxiaobiao.ttf} 中的 Path 设置为移动后的路径。
 
 ## 参考文献格式标准
-本模板使用gbt7714-2005.bst文件控制参考文献样式，而学校文件中指出的是GB7714-87（显然已经远远落后于时代步伐），用户想要使用不同的参考文献格式，请自行准备.bst文件，例如[gbt7714-2015](https://github.com/CTeX-org/gbt7714-bibtex-style),将文件放置于模板目录中，并在XSYUthesis.cls文件中找到\bibliographystyle{gbt7714-2005}命令行进行修改。
+本模板使用gbt7714-2015.bst文件控制参考文献样式，而学校文件中指出的是GB7714-87（显然已经远远落后于时代步伐），用户想要使用不同的参考文献格式，请自行准备.bst文件。将文件放置于模板目录中，并在XSYUthesis.cls文件中找到\bibliographystyle{gbt7714-numerical}命令行进行修改。
 
 ## 已知问题
 * 使用XeTeX时，AutoFakeBold选项导致复制乱码。模板中在`\begin{document}`后插入一个日文的空格'　'，使得除章节一级标题外其他内容可复制。
@@ -45,3 +45,5 @@ XSYUthesis_xelatex is an *unofficial* XeLaTeX template for preparing  master, or
 * 本模板生成的PDF在知网查重符合西电要求，不会产生乱码。
 * 本模板生成的PDF于2021年6月被西安石油大学计算机学院研究生首次使用，并通过了知网查重。
 
+## 论文提交
+* 本模板生成的PDF论文已通过我校图书馆的提交和审核。
