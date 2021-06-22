@@ -665,7 +665,7 @@
 \RequirePackage{url}
 \renewcommand{\UrlFont}{\XSYU@font@zihao{-4}}
 \ctexset { bibname={\XSYU@label@ref@title } }
-\bibliographystyle{gbt7714-2005}
+\bibliographystyle{gbt7714-numerical}
 
 \renewenvironment{thebibliography}[1]
   {\XSYU@toc@add{\XSYU@toc@ref@title}%
