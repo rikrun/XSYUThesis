@@ -6,3 +6,5 @@
 *.blg
 *.synctex.gz
 *.aux
+templet.fdb_latexmk
+templet.fls
