@@ -1,0 +1,39 @@
+\chapter{模板使用方法}
+\section{模板包目录结构说明}
+\dirtree{%
+ .1 /.
+ .2 bib\DTcomment{参考文献目录}.
+ .3 tex.bib\DTcomment{参考文献文件}.
+ .2 chapters\DTcomment{章节文件目录}.
+ .3 abstract.tex\DTcomment{摘要}.
+ .3 appendix.tex\DTcomment{附录}.
+ .3 resume.tex\DTcomment{学术成果}.
+ .3 thanks.tex\DTcomment{致谢}.
+ .3 chapter*.tex\DTcomment{各章节源文件}.
+ .2 figures\DTcomment{论文用图目录}.
+ .2 font\DTcomment{字体目录}.
+ .3 FZxiaobiao.ttf\DTcomment{需要使用的方正小标宋简体字体}.
+ .2 gbt7714-numerical.bst\DTcomment{参考文献格式标准使用gbt7714-2015（学校给出的是GB7714-87）}.
+ .2 templet.tex\DTcomment{模板主控文件}.
+ .2 XSYUthesis.cfg\DTcomment{作者信息配置}.
+ .2 XSYUthesis.cls\DTcomment{模板样式设置}.
+ .2 XSYUthesis.def\DTcomment{论文信息配置}.
+ }
+\section{环境搭建}
+本模板是在Windows 10(2004)下，安装TexLive2020及Visual Studio Code后，修改制作完成的。
+\subsection{TexLive的安装}
+\begin{enumerate}
+    \item 下载TexLive前往http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe。
+    \item 安装过程参考https://blog.csdn.net/weixin\_39892850/article/details/105468247。
+\end{enumerate}
+\subsection{Visual Studio Code的安装}
+\begin{enumerate}
+    \item 安装过程参考https://zhuanlan.zhihu.com/p/106357123。
+    \item vscode的Latex环境配置参考https://zhuanlan.zhihu.com/p/38178015。
+\end{enumerate}
+\subsection{字体的安装}
+我校研究生学位论文封面中使用了方正小标宋。windows系统下需要自行安装。请谨记：非必要请勿移动fornt/FZxiaobiao.ttf的文件位置，如需移动，请将 XSYUthesis.cls 文件中的命令\verb|\|setCJKfamilyfont\{xbsong\}[AutoFakeBold=true,Path=./font/]\{FZxiaobiao.ttf\}中的Path设置为移动后的路径。
+\subsection{其他问题}
+\begin{itemize}
+    \item 正文中未见参考文献列表及参考文献为[?]的情况：请在使用xelatex命令之前，多使用bibtex命令编译几遍。
+\end{itemize}
