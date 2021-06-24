@@ -21,17 +21,17 @@
 \subsection{多等式}
 
 MOSSE分别对分子和分母进行平均：
-~\\
-\begin{equation}
-\begin{cases}
-    \hat{h}^\ast = \frac{A_t}{B_t}\\
-    A_t = \eta(\hat{y}_t\odot\hat{x}_t^\ast) + (1-\eta)A{t-1}\\
-    B_t = \eta(\hat{x}_t\odot\hat{x}_t^\ast) + (1-\eta)B{t-1}
-\end{cases}
-\label{eq:RT_MOSSEruningAverage}
-\end{equation}
-~\\
-其中$\eta$是学习率。这使得最近的帧更受重视，并且让先前帧的影响随时间呈指数级衰减。
+% ~\\
+% \begin{equation}
+% \begin{cases}
+%     \hat{h}^\ast = \frac{A_t}{B_t}\\
+%     A_t = \eta(\hat{y}_t\odot\hat{x}_t^\ast) + (1-\eta)A{t-1}\\
+%     B_t = \eta(\hat{x}_t\odot\hat{x}_t^\ast) + (1-\eta)B{t-1}
+% \end{cases}
+% \label{eq:RT_MOSSEruningAverage}
+% \end{equation}
+% ~\\
+% 其中$\eta$是学习率。这使得最近的帧更受重视，并且让先前帧的影响随时间呈指数级衰减。
 
 \subsection{长公式}
 
