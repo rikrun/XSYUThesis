@@ -203,7 +203,7 @@
 \setlength{\topmargin}{0mm}
 \setlength{\headheight}{25pt}
 \setlength{\headsep}{0mm}
-\setlength{\footskip}{7.5mm} 
+\setlength{\footskip}{7.5mm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%    head and foot
@@ -257,26 +257,47 @@
 }
 \fancypagestyle{abstractfancy}{
   \thispagestyle{fancy}
+  \fancyhf{}
   \fancyhead[C]{{\XSYU@font@st\XSYU@font@zihao{5}中文摘要}}
+  \fancyfoot[C]{{\XSYU@font@st\XSYU@font@zihao{-5}\thepage}}
 }
 \fancypagestyle{abstractefancy}{
   \thispagestyle{fancy}
+  \fancyhf{}
   \fancyhead[C]{{\XSYU@font@st\XSYU@font@zihao{5}英文摘要}}
+  \fancyfoot[C]{{\XSYU@font@st\XSYU@font@zihao{-5}\thepage}}
+}
+\fancypagestyle{contentfancy}{
+  \thispagestyle{fancy}
+  \fancyhf{}
+  \fancyhead[C]{{\XSYU@font@st\XSYU@font@zihao{5}目\hspace*{3em}录}}
+  \fancyfoot[C]{{\XSYU@font@st\XSYU@font@zihao{-5}\thepage}}
 }
 \fancypagestyle{resumefancy}{
   \thispagestyle{fancy}
+  \fancyhf{}
   \fancyhead[C]{{\XSYU@font@st\XSYU@font@zihao{5}攻读硕士学位期间参加科研情况及获得的学术成果}}
+  \fancyfoot[C]{{\XSYU@font@st\XSYU@font@zihao{-5}\thepage}}
 }
 \fancypagestyle{appendixfancy}{
   \thispagestyle{fancy}
+  \fancyhf{}
   \fancyhead[C]{{\XSYU@font@st\XSYU@font@zihao{5}附录}}
+  \fancyfoot[C]{{\XSYU@font@st\XSYU@font@zihao{-5}\thepage}}
 }
 
-\pagestyle{fancy}
+\fancypagestyle{mainfancy}{
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[CE]{{\XSYU@font@st\XSYU@font@zihao{5}\XSYU@hdr@thesistitle}}
+    \fancyhead[CO]{{\XSYU@font@st\XSYU@font@zihao{5}\nouppercase\leftmark}}
+    \fancyfoot[C]{{\XSYU@font@st\XSYU@font@zihao{-5}\thepage}}
+}
+
 \fancyhf{}
-\fancyhead[CE]{{\XSYU@font@st\XSYU@font@zihao{5}\XSYU@hdr@thesistitle}}
-\fancyhead[CO]{{\XSYU@font@st\XSYU@font@zihao{5}\nouppercase\leftmark}}
+\fancyhead[C]{{\XSYU@font@st\XSYU@font@zihao{5}\nouppercase\leftmark}}
 \fancyfoot[C]{{\XSYU@font@st\XSYU@font@zihao{-5}\thepage}}
+
 %% par skip
 %\parskip 0pt plus 6pt minus 0pt
 
@@ -482,6 +503,20 @@
 %   \setlength{\parindent}{2\ccwd}\cleardoublepage}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 去除空白页页码clearemptydoublepage
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{%
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}%
+}
+%% 加强版的cleardoublepage命令
+\renewcommand\cleardoublepage{%
+\clearpage
+%\ifodd\value{page}\else\stepcounter{page}\fi
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%    statement and copyright 配置创新性声明使用授权的说明
 \DeclareRobustCommand{\XSYU@make@statementandcopyright}
   {{\cleardoublepage\setlength{\parindent}{0pt}
@@ -517,18 +552,7 @@
   \clearpage\thispagestyle{empty}%
   \setlength{\parindent}{2\ccwd}\cleardoublepage}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 去除空白页页码clearemptydoublepage
-\let\origdoublepage\cleardoublepage
-\newcommand{\clearemptydoublepage}{%
-  \clearpage
-  {\pagestyle{empty}\origdoublepage}%
-}
-%% 加强版的cleardoublepage命令
-\renewcommand\cleardoublepage{%
-\clearpage
-\ifodd\value{page}\else\stepcounter{page}\fi
-}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%    abstract
@@ -538,7 +562,8 @@
 \newenvironment{abstract}
   {%\XSYU@toc@add{\XSYU@toc@abstract}
   \thispagestyle{empty}
-  \thispagestyle{abstractfancy}
+  \pagestyle{abstractfancy}
+  %\thispagestyle{abstractfancy}
   \noindent{\textbf{\XSYU@label@abstract@title\XSYU@value@thesis@title\XSYU@value@THesis@titles}\\%
   \textbf{\XSYU@label@abstract@procession\XSYU@value@author@major}\\%
   \textbf{\XSYU@label@abstract@stu\XSYU@value@author@name\XSYU@value@thesis@signature\XSYU@underline[3cm]}\\%
@@ -549,7 +574,8 @@
   \end{center}
   \vskip -10pt
   \par{\XSYU@font@zihao{-4}}}
-  {\addtocounter{page}{-1}\cleardoublepage}%如果不要页眉页脚，改为\clearemptydoublepage
+  \clearpage
+  %{\addtocounter{page}{-1}}%如果不要页眉页脚，改为\clearemptydoublepage
 
 %% chinese keywords
 \DeclareRobustCommand{\keywords}[1]
@@ -568,7 +594,8 @@
 \newenvironment{englishabstract}
   {%\XSYU@toc@add{\XSYU@etoc@abstract}
   \thispagestyle{empty}
-  \thispagestyle{abstractefancy}
+  %\thispagestyle{abstractefancy}
+  \pagestyle{abstractefancy}
   \begin{table}[]
     \setlength{\tabcolsep}{0mm}{
       \begin{tabular}{lp{13cm}}
@@ -583,7 +610,7 @@
   \end{center}
    \vspace{-2ex}\setlength{\parindent}{0pt}\normalfont\XSYU@font@zihao{-4}%
    \setlength{\parindent}{0pt}}
-  {\cleardoublepage}
+   \clearpage
 
 %% english keywords
 \DeclareRobustCommand{\englishkeywords}[1]
@@ -645,7 +672,7 @@
     {\setlength{\topsep}{0pt}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}
     \setlength{\parindent}{0pt}\normalfont\XSYU@font@st\XSYU@font@zihao{-4}
      \setlength{\leftmargin}{0.5\labelwidth}}}
-  {\end{list}\setlength{\parindent}{2\ccwd}\addtocounter{page}{-1}\cleardoublepage}
+  {\end{list}\setlength{\parindent}{2\ccwd}\clearpage}
 
 %% list of abbreviations
 \newenvironment{abbreviationlist}
@@ -658,7 +685,7 @@
   {\end{list}\setlength{\parindent}{2\ccwd}\cleardoublepage}
 
 %% content
-\ctexset {contentsname={\vskip -20pt  \XSYU@label@content\addtocounter{page}{-1} \vskip -15pt  }}
+\ctexset {contentsname={\vskip -20pt  \XSYU@label@content \vskip -15pt  }}
 \DeclareRobustCommand{\XSYU@tableofcontents}
   {\tableofcontents}
 %\renewcommand{\cftdotsep}{0.3pt}
@@ -704,6 +731,7 @@
 \renewenvironment{appendix}
   {\XSYU@toc@add{\XSYU@toc@appendix}%
    \thispagestyle{empty}
+
    \thispagestyle{appendixfancy}
    ~
    \flushleft\XSYU@font@zihao{4}\textbf{\XSYU@label@appendix}\\
@@ -763,13 +791,18 @@
 
 %% premain matter
 \DeclareRobustCommand{\XSYUpremainmatter}
-  {\clearemptydoublepage\XSYU@tableofcontents\cleardoublepage%
+  {\clearemptydoublepage
+    \pagestyle{contentfancy}
+    \XSYU@tableofcontents\cleardoublepage%
+
     %\XSYU@listoffigures\cleardoublepage%
    %\XSYU@listoftables\cleardoublepage%
   }
 %% main matter
 \DeclareRobustCommand{\XSYUmainmatter}
-  {\mainmatter}
+  { \pagestyle{mainfancy}
+    \mainmatter
+  }
 
 %% back matter
 \DeclareRobustCommand{\XSYUbackmatter}[1]
